@@ -1,0 +1,110 @@
+@media screen and (min-width: 320px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 440px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    html {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    html {
+        font-size: 28px;
+    }
+}
+
+p.weui-grid__label {
+    color: #555;
+}
+
+p.weui-toast_content {
+    color: #fff;
+}
+
+label.weui-cell {
+    font-size: 1.3rem;
+}
+
+div.toolbar,
+.toolbar .title {
+    font-size: 1.2rem;
+}
+
+header,
+div.header {
+    color: #fff;
+    background-color: #59A6D4;
+    text-align: center;
+    padding: 0.62rem;
+    font-weight: bold;
+    overflow: hidden;
+    font-size: 1.2rem;
+}
+
+div.header>div {
+    float: left;
+}
+
+div.btn-prepare {
+    position: fixed;
+    padding: 0.62rem 0rem;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+div.btn-un-prepare {
+    background-color: #9ed99d;
+    color: hsla(0, 0%, 100%, .6);
+}
+
+div.btn-act-prepare {
+    background-color: #1aad19;
+    color: white;
+}
+
+div.btn-act-prepare:active {
+    color: hsla(0, 0%, 100%, .6);
+    background-color: #179b16;
+}
+
+div.header>div:first-child {
+    width: 25%;
+}
+
+div.header>div.title {
+    width: 50%;
+}
+
+div.img-wrap {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+div.img-wrap>img {
+    width: 100%;
+    height: 100%;
+    max-width: 48px;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>支付预览</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.1.1/style/weui.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="css/wx_merchant_common.css">
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            <div class="img-wrap" onclick="location.href='index.html'">
+                <img src="images/back.png">
+            </div>
+        </div>
+        <div class="title">
+            支付确认</div>
+    </div>
+    <!-- 界面开始 -->
+    <div class="body">
+        <div class="weui-form-preview">
+            <div class="jft-form-preview">
+            </div>
+            <div class="weui-form-preview__hd">
+                <label class="weui-form-preview__label">付款金额</label>
+                <em class="weui-form-preview__value">¥240.00</em>
+            </div>
+            <div class="weui-form-preview__bd">
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">订单号</label>
+                    <span class="weui-form-preview__value">20170710A100000105</span>
+                </div>
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">申请时间</label>
+                    <span class="weui-form-preview__value">2017-07-10 21:14:14</span>
+                </div>
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">卡号</label>
+                    <span class="weui-form-preview__value">未选择</span>
+                </div>
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">卡类型</label>
+                    <span class="weui-form-preview__value">未选择</span>
+                </div>
+                <div class="weui-form-preview__item">
+                    <label class="weui-form-preview__label">用户备注</label>
+                    <span class="weui-form-preview__value">用来测试的一笔订单，并且测试备注的换行
+                    </span>
+                </div>
+            </div>
+            <div class="weui-form-preview__ft">
+                <a class="weui-form-preview__btn weui-form-preview__btn_default">普通卡</a>
+                <a class="weui-form-preview__btn weui-form-preview__btn_primary">电子卡(荐)</a>
+            </div>
+        </div>
+    </div>
+    <div class="btn-prepare btn-act-prepare">确认支付</div>
+    <!-- 购卡界面开始 -->
+    <div id="popup-buy-card" class="weui-popup__container">
+        <div class="weui-popup__overlay"></div>
+        <div class="weui-popup__modal" style="background-color: #f3f3f3;">
+            <div class="header">
+                <div>
+                    <div class="img-wrap">
+                        <img src="images/close.png">
+                    </div>
+                </div>
+                <div class="title">
+                    购买电子卡</div>
+            </div>
+        </div>
+    </div>
+    <!-- 购卡界面结束 -->
+    <!-- 界面结束 -->
+    <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
+    <script type="text/javascript">
+    $('a.weui-form-preview__btn_default').select({
+        title: "选择绑定卡",
+        items: ["003502651839", "003502651995", "003502652343", "003523431839"],
+        onChange: function(d) {
+            console.log(d);
+        }
+    });
+    // $('a.weui-form-preview__btn_primary').select({
+    //     title: "选择绑定卡",
+    //     items: ["003502651839", "003502651995", "003502652343", "003523431839"],
+    //     onChange: function(d) {
+    //         console.log(d);
+    //     }
+    // });
+
+    $('a.weui-form-preview__btn_primary').click(function() {
+        // $.confirm({
+        //     title: '购买电子卡？',
+        //     text: '您没有电子卡，可以选择购买',
+        //     onOK: function() {
+        //         $("#popup-buy-card").popup();
+        //     }
+        // });
+        $("#popup-buy-card").popup();
+    });
+    $('.btn-prepare').click(function() {
+        $.showLoading('请稍后');
+        setTimeout(function() {
+            $.hideLoading();
+        }, 1500);
+    });
+    $('div.img-wrap').click(function() {
+        $.closePopup();
+    });
+    </script>
+</body>
+
+</html>

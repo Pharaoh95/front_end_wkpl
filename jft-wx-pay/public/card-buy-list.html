@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>购卡历史 </title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.1.1/style/weui.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="css/wx_merchant_common.css">
+    <style type="text/css">
+    a.weui-navbar__item {
+        padding: 0.6rem;
+    }
+    
+    .weui-navbar__item.weui-bar__item--on {
+        color: #3cc51f;
+        font-weight: bold;
+        background-color: #fafafa;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            <div class="img-wrap">
+                <img src="images/back.png" onclick="location.href='index.html'">
+            </div>
+        </div>
+        <div class="title">购卡历史</div>
+    </div>
+    <!-- 容器 -->
+    <div class="weui-tab">
+        <div class="weui-navbar">
+            <a class="weui-navbar__item weui-bar__item--on" href="#tab-day">近一日</a>
+            <a class="weui-navbar__item" href="#tab-week">近一周</a>
+            <a class="weui-navbar__item" href="#tab-month">近一月</a>
+        </div>
+        <div class="weui-tab__bd">
+            <div id="tab-day" class="weui-tab__bd-item weui-tab__bd-item--active">
+                <h1>页面一</h1>
+            </div>
+            <div id="tab-week" class="weui-tab__bd-item">
+                <h1>页面二</h1>
+            </div>
+            <div id="tab-month" class="weui-tab__bd-item">
+                <h1>页面三</h1>
+            </div>
+        </div>
+    </div>
+    <footer>
+    </footer>
+    <!-- 界面结束 -->
+    <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

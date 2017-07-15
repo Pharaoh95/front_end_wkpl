@@ -1,0 +1,33 @@
+一、插件列表
+	0.Nodejs：与nodejs文件编译相关插件，前提：Node + npm
+	1.npm：负责管理node包，前提：Node + npm
+	2.Emmet：Html/css代码补全神器
+	3.SideBarEnhancements：菜单项增强
+	4.HTML/CSS/JS Prettify：代码格式化，前提：Node + npm
+	5.PackageResourceViewer：搜索文件
+	6.SublimeCodeIntel：代码智能提示
+	7.AutoFileName：文件名自动补全
+
+二、主题插件：
+	0.Boxy，当前为Yesterday子主题
+
+三、左侧导航字体调节:
+	0.PackageResourceViewer:open
+	1.查找当前Theme，如Boxy
+	2.查找当前主题子主题的配置文件
+	3.搜索：sidebar_label，修改font.size为14
+	
+四、常用快捷键
+	0.Ctrl+Shift+P：打开命令面板
+	1.Ctrl+Shift+H：代码格式(html/css/js)，需要安装html-css-js prettify插件
+	2.Ctrl+Shift+K：删除整行
+	3.ctrl+shift+F：在文件夹内查找，与普通编辑器不同的地方是sublime允许添加多个文件夹进行查找
+
+五、修改nodejs控制台编码问题
+	0.前提：安装好nodejs + npm
+	1.打开Packages>Nodejs>Nodejs.sublime-build，修改对应编码
+
+六、npm全局模块问题：
+	0.设置模块全局路径：npm config set prefix"D:\nodejs\node_g_modules"
+	1.设置模块缓存路径：npm config set cache"D:\nodejs\node_cache"
+	2.配置NODE_PATH环境变量：即为模块全局路径：D:\nodejs\node_g_modules

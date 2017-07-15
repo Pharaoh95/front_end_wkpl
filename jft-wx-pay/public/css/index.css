@@ -1,0 +1,23 @@
+header {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px 13px;
+    position: fixed;
+}
+
+body {
+    margin: 0px 0px;
+}
+
+div.body {
+    margin-top: 60px;
+}
+
+p footer {
+    height: 100px;
+    width: 100%;
+    color: #fff;
+    background-color: #2d3e50;
+}
