@@ -1,36 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <title>购电子卡</title>
-    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.1.1/style/weui.min.css">
-    <link rel="stylesheet" href="//cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
-    <link rel="stylesheet" href="css/wx_merchant_common.css">
-    <style type="text/css">
-
-    </style>
-</head>
-
-<body>
-    <div class="header">
-        <div>
-            <div class="img-wrap" onclick="location.href='index.html'">
-                <img src="images/back.png">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport"/>
+        <title>
+            购电子卡
+        </title>
+        <link href="//cdn.bootcss.com/weui/1.1.1/style/weui.min.css" rel="stylesheet"/>
+        <link href="//cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css" rel="stylesheet"/>
+        <link href="css/wx_merchant_common.css" rel="stylesheet"/>
+        <style type="text/css">
+            body{
+                background-color: #f4f5f9;
+                font-size: 1rem;
+                color: #555; 
+            }
+            div.acquirer-area{
+                text-align: center;
+                padding: 1.4rem 0;
+            }
+            .acquirer-area .img-wrap{
+                width: 4rem;
+                height: 4rem;
+                margin: 0 auto;
+                margin-bottom: 0.4rem;
+            }
+            div.wx-pay-area{
+                background-color: #fff;
+                padding: 1.5rem 2%;
+            }
+            div.wx-submit-area{
+                padding: 1rem 3%;
+            }
+            div.wx-pay-area>div{
+                display: inline-block;
+            }
+            div.pay-value-area{
+                width: 90%; 
+            }
+            #pay-value{
+                border: none;
+                border-bottom: #c4c4c4 solid 1px;
+                width: 100%;
+                height: 2.4rem;
+                line-height: 2rem;
+                font-size: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div>
+                <div class="img-wrap" onclick="location.href='index.html'">
+                    <img src="images/back.png">
+                    </img>
+                </div>
+            </div>
+            <div class="title">
+                购电子卡
             </div>
         </div>
-        <div class="title">
-            购电子卡</div>
-    </div>
-    <!-- 界面开始 -->
-    <div class="body">
-    </div>
-    <!-- 界面结束 -->
-    <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
-    <script type="text/javascript">
-    </script>
-</body>
-
+        <!-- 界面开始 -->
+        <div class="body">
+            <div class="acquirer-area">
+                <div class="img-wrap">
+                    <img src="images/jfeitlogo.png"/>
+                </div>
+                江西缴费通信息技术股份有限公司
+            </div>
+            <div class="wx-pay-area">
+                <div style="width: 7%;">
+                    <div class="img-wrap">
+                        <img src="images/yuan.png"/>
+                    </div>
+                </div>
+                <div class="pay-value-area">
+                    <input id="pay-value" type="text">
+                    </input>
+                </div>
+            </div>
+            <div class="wx-submit-area">
+                <a class="weui-btn weui-btn_primary">
+                    确认购买
+                </a>
+            </div>
+        </div>
+        <!-- 界面结束 -->
+        <!-- 此处页脚存在输入时被顶起的bug，暂不显示 -->
+        <footer style="display: none;">
+            <div class="weui-footer weui-footer_fixed-bottom">
+                <p class="weui-footer__links">
+                    <a class="weui-footer__link" href="https://www.jft.net.cn">
+                        缴费通官网
+                    </a>
+                </p>
+                <p class="weui-footer__text" style="font-family:arial;">
+                    Copyright © 2007-2017 www.jft.net.cn
+                </p>
+            </div>
+        </footer>
+        <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js">
+        </script>
+        <script src="//cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js">
+        </script>
+        <script type="text/javascript">
+        </script>
+    </body>
 </html>
