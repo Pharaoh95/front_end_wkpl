@@ -1,34 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport"/>
+        <title>
+            支付请求
+        </title>
+        <link href="//cdn.bootcss.com/weui/1.1.1/style/weui.min.css" rel="stylesheet"/>
+        <link href="//cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css" rel="stylesheet"/>
+        <link href="css/wx_merchant_common.css" rel="stylesheet"/>
+        <style type="text/css">
+            body{
+                background-color: #f4f5f9;
+                font-size: 1rem;
+                color: #555; 
+            }
+            div.acquirer-area{
+                text-align: center;
+                padding: 2rem 0;
+            }
+            .acquirer-area .img-wrap{
+                width: 4rem;
+                height: 4rem;
+                margin: 0 auto;
+                margin-bottom: 0.4rem;
+            }
+            div.wx-pay-area{
+                background-color: #fff;
+                padding: 1rem 2% 0.7rem;
+                /*padding-bottom: 0.7rem;*/
+                border-bottom: #d4d4d4 1px solid;
+            }
+            div.wx-pay-area>div{
+                display: inline-block;
+            }
+            div.pay-value-area{
+                width: 90%; 
+            }
+            #pay-value,#pay-note{
+                border: none;
+                width: 100%;
+                font-size: 2rem;
+                text-indent: 0.4rem;
+            }
+            #pay-value{
+                height: 2.4rem;
+                line-height: 2.5rem;
+                border-bottom: #d4d4d4 solid 1px;
+            }
+            #pay-note{
+                font-size: 1.2rem;
+                height: 2rem;
+                line-height: 2.1rem;
+            }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <title>支付请求</title>
-    <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.1.1/style/weui.min.css">
-    <link rel="stylesheet" href="//cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
-    <link rel="stylesheet" href="css/wx_merchant_common.css">
-</head>
-
-<body>
-    <div class="header">
-        <div>
-            <div class="img-wrap" onclick="location.href='index.html'">
-                <img src="images/back.png">
+            div.img-wrap>img{
+                border-radius: 50%;
+            }
+            div.pay-note-area{
+                width: 98%;
+                margin-top: 0.9rem;
+            }
+            div.wx-submit-area{
+                padding: 1rem 3%;
+                padding-bottom: 0.75rem;
+            }
+            div.wx-card-area{
+                /*color: #2497e3;*/
+                width: 50%;
+                margin: 0 auto;
+                text-align: center;
+                padding-bottom: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div>
+                <div class="img-wrap" onclick="location.href='index.html'">
+                    <img src="images/back.png">
+                    </img>
+                </div>
+            </div>
+            <div class="title">
+                支付请求
             </div>
         </div>
-        <div class="title">
-            支付请求</div>
-    </div>
-    <!-- 界面开始 -->
-    <div class="body">
-    </div>
-    <div class="btn-prepare btn-act-prepare">支&nbsp;付</div>
-    <!-- 界面结束 -->
-    <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
-    <script type="text/javascript">
-    </script>
-</body>
-
+        <!-- 界面开始 -->
+        <div class="body">
+            <div class="acquirer-area">
+                <div class="img-wrap">
+                    <img src="images/demo-merchant.jpg"/>
+                </div>
+                肯德基宅急送(新城吾悦广场店)
+            </div>
+            <div class="wx-pay-area">
+                <div style="width: 7%;">
+                    <div class="img-wrap">
+                        <img src="images/yuan.png"/>
+                    </div>
+                </div>
+                <div class="pay-value-area">
+                    <input id="pay-value" type="text" placeholder="0.00" />
+                </div>
+                <div class="pay-note-area">
+                    <input id="pay-note" type="text" placeholder="添加备注(20以内)" />
+                </div>
+            </div>
+            <div class="wx-submit-area">
+                <a class="weui-btn weui-btn_primary">
+                    确认支付
+                </a>
+            </div>
+            <div class="wx-card-area">
+                快捷支付(1829)，更换
+            </div>
+        </div>
+        <!-- 界面结束 -->
+        <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js">
+        </script>
+        <script src="//cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js">
+        </script>
+        <script type="text/javascript">
+        </script>
+    </body>
 </html>
